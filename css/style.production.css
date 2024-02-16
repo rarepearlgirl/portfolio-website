@@ -112,6 +112,9 @@ margin-bottom: 10px;
 }
 
 .active-gray-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #8080802e;
     padding: 5px 15px;
     border-radius: 10px;
@@ -392,8 +395,7 @@ margin-bottom: 10px;
 }
 
 .contact {
-  margin-left: 40px;
-  padding: 10px;
+  margin: 40px;
 }
 
 .navigation-list__item {
