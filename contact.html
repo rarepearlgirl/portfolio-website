@@ -18,9 +18,6 @@
     <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list">
         <li role="presentation">
-          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-        </li>
-        <li role="presentation">
           <a href="abouteva.html" role="menuitem" class="navigation-list__item ">About Eva</a>
         </li>
         <li role="presentation">
@@ -34,20 +31,25 @@
   </header>
   <main>
     <div class="contact">
-      <a href="https://www.linkedin.com/in/eva-nikolaieva-b9bb06180/details/experience/" target="_blank">You can visit
-        my linkedin profile</a> or <a href="https://www.labirint.ru/authors/242558/" target="_blank">find translated
-        books here (in Russian)</a>
+      <div class="profile-section">
+      <a href="https://www.linkedin.com/in/eva-nikolaieva-b9bb06180/details/experience/" target="_blank" class="active-gray-link"><h2>You can visit my linkedin profile</h2>
+        </a> 
+        <p>or</p> 
+        <a href="https://www.labirint.ru/authors/242558/" target="_blank" class="active-gray-link"><h2>find translated
+        books here (in Russian)</h2></a>
+      </div>
+
       <p><a href="tel:+4915172661888">Call me at this number</a><br>
         Email: <a href="mailto:draculahgirl@gmail.com"> draculahgirl@gmail.com</a></p>
 
-      <form action="best-practice" method="post" id="contact-form">
+      <form action="best-practice" method="post" id="contact-form" class="contact-form">
         <label class="standard-label" for="contact-email">E-mail: </label>
-        <input type="email" id="contact-email" required="required">
+        <input type="email" id="contact-email" required="required" class="styled-input">
         <label class="standard-label" for="contact-number">Tel: </label>
-        <input type="tel" id="contact-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+        <input type="tel" id="contact-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}"  class="styled-input">
         <label class="standard-label" for="my-input">Message: </label>
-        <textarea maxlength="240" id="my-input" required="required"></textarea>
-        <input type="submit" value="Send message">
+        <textarea maxlength="240" id="my-input" required="required"  class="styled-textfield"></textarea>
+        <input type="submit" class="styled-button" value="Send message">
       </form>
     </div>
   </main>
