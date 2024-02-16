@@ -148,6 +148,33 @@ margin-bottom: 10px;
   padding: 0 20px 5px 40px
 }
 
+@media all and (max-width: 700px) {
+  .project-item {
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 20px;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.project-item-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 10px 0 10px
+}
+
+.item-reverse {
+  flex-direction: column;
+}
+}
+
 .profile {
   display: block;
   text-align: center;
@@ -848,4 +875,15 @@ display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media all and (max-width: 700px) {
+.profile__pic {
+  width: 200px !important;
+};
+.profile-about {
+  width: 90% !important;
+  padding: 40px;
+  gap: 15px; 
+};
 }
