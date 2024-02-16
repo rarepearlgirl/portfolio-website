@@ -76,14 +76,23 @@ p {
   align-items: center;
 }
 
+.animated-block {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.animated-block.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .project-item {
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   margin: 0;
-  /* Remove horizontal margins */
   padding: 20px;
   width: calc(100% - 40px);
-  /* Adjust the width to accommodate for padding */
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -91,18 +100,8 @@ p {
   box-sizing: border-box;
 }
 
-.project-item-reverse {
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  margin: 0;
-  /* Remove horizontal margins */
-  padding: 20px;
-  width: calc(100% - 40px);
-  display: flex;
+.item-reverse {
   flex-direction: row-reverse;
-  overflow: auto;
-  height: 400px;
-  box-sizing: border-box;
 }
 
 .img-container {

@@ -40,7 +40,7 @@
   <!--Main content-->
   <div class="projects-container">
     <!-- Project items -->
-    <div class="project-item" onclick="moveGridItem(this)">
+    <div class="project-item animated-block" onclick="moveGridItem(this)">
        <a href="https://rarepearlgirl.github.io/pokedex-1/index.html" target="_blank" class="img-container">
       <img src="img/react_movie_app_project_full.jpeg" class="project-img">
        </a>
@@ -66,7 +66,7 @@
         </div>
       </div>
     </div>
-    <div class="project-item-reverse" onclick="moveGridItem(this)">
+    <div class="project-item animated-block item-reverse" onclick="moveGridItem(this)">
        <a href="https://rarepearlgirl.github.io/pokedex-1/index.html" target="_blank" class="img-container">
       <img src="img/meet-1.jpeg" class="project-img">
        </a>
@@ -93,7 +93,7 @@
         </div>
       </div>
     </div>
-    <div class="project-item" onclick="moveGridItem(this)">
+    <div class="project-item animated-block" onclick="moveGridItem(this)">
        <a href="https://rarepearlgirl.github.io/pokedex-1/index.html" target="_blank" class="img-container">
       <img src="img/angular-app-4.jpeg" class="project-img">
        </a>
@@ -120,7 +120,7 @@
         </div>
       </div>
     </div>
-    <div class="project-item-reverse" onclick="moveGridItem(this)">
+    <div class="project-item animated-block item-reverse" onclick="moveGridItem(this)">
        <a href="https://rarepearlgirl.github.io/pokedex-1/index.html" target="_blank" class="img-container">
       <img src="img/mymovie-db.jpeg" class="project-img">
        </a>
@@ -136,7 +136,7 @@
         </div>
       </div>
     </div>
-    <div class="project-item" onclick="moveGridItem(this)">
+    <div class="project-item animated-block" onclick="moveGridItem(this)">
        <a href="https://rarepearlgirl.github.io/pokedex-1/index.html" target="_blank" class="img-container">
       <img src="img/chat-app-1.jpeg" class="project-img">
        </a>
@@ -163,7 +163,7 @@
         </div>
       </div>
     </div>
-    <div class="project-item-reverse" onclick="moveGridItem(this)">
+    <div class="project-item animated-block item-reverse" onclick="moveGridItem(this)">
       <a href="https://rarepearlgirl.github.io/pokedex-1/index.html" target="_blank" class="img-container"><img src="img/pokedex-1.jpeg" class="project-img"></a>
       <div class="project-item-info">
          <h2>Poke-dex</h2>
@@ -675,6 +675,28 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <!-- <script>AOS.init();</script> -->
   <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
+  
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const animatedBlocks = document.querySelectorAll('.animated-block');
+
+  function checkVisibility() {
+    animatedBlocks.forEach(block => {
+      const top = block.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const bottom = block.getBoundingClientRect().bottom;
+      if ((top < windowHeight * 0.75 && bottom > 0) || (top > windowHeight && bottom < 0)) { // Adjust this value as needed
+        block.classList.add('active');
+      } else {
+        block.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  checkVisibility(); // Check visibility initially
+});
+</script>
 
 
 </body>
